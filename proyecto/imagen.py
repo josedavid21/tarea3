@@ -37,12 +37,12 @@ def presentadorimg(esc, foto):
 	#escala 1:1
 	imagen = Image.open(foto) 
 	'''"Abre" e identifica la imagen y se la asigna a una variable, en este caso llamada imagen'''
-	if esc == 0:
+	if esc == 1:
 		imagen.show() 
 		'''Despliega en pantalla la imagen'''
 		tiempo_fin = time.time_ns()
 	#escala 1:2	
-	elif esc == 1:
+	elif esc == 2:
 		size = imagen.size 
 		'''Le asigna a una variable una tupla la cual contiene los datos de ancho y altura -en dicho orden- de la imagen cargada'''
 		'''La siguiente sección de códgo se encarga de escalar (en este caso 1:2) la imagen, se emplea la información de la tupla (se divide entre dos la anchura y altura, asimismo dicha información se asigna a variables). Importante destacar que se asegura que los parámetros de resize sean enteros'''
@@ -62,7 +62,7 @@ def presentadorimg(esc, foto):
 			
 	#escala 2:1
 	#Este caso es semejante al anterior, pero con una presentación 2:1
-	elif esc == 2:
+	elif esc == 3:
 		size = imagen.size
 		ancho = size[0]
 		altura = size[1]
