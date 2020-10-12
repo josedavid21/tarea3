@@ -3,7 +3,7 @@ setup(
 	name='Tarea3',
 	version='0.1',
 	package_dir= {'proyecto':'../tarea3'}, ###########
-	packages= ["Tarea3"], #find_packages(),
+	packages= ["tarea3"], #find_packages(),
 	description='El paquete requerido para la solución de la terea número 3 del curso microprocesadores y microcontroladores',
 	# long_description=open('README.txt').read(),
 	scripts= ["MetodoSonido.py","imagen.py"],
