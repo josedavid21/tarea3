@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 setup(
 	name='PaqueteTarea3',
 	version='0.1',
-	package_dir= {'PaqueteTarea3':'Tarea3'}, 
+	package_dir= {'PaqueteTarea3':'proyecto'}, 
 	packages= find_packages(),
 	description='El paquete requerido para la solución de la tarea número 3 del curso microprocesadores y microcontroladores',
 	# long_description=open('README.txt').read(),
-	scripts= ["Tarea3/MetodoSonido.py","Tarea3/imagen.py"],
+	scripts= ["proyecto/MetodoSonido.py","proyecto/imagen.py"],
 	install_requires=['playsound==1.2.2',
 	     'pillow>=7.0.0',
 	     'tabulate>=0.8.7',
