@@ -13,7 +13,7 @@ def cuentapalabras(lista):
 def main3():
     #Definir argumentos de argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("file", help="archivo de texto")
+    parser.add_argument("file", help="ruta de archivo de texto por leer")
     parser.add_argument("-t", "--time", help= "Tiempo de ejecución del método", action="store_true")
     args = parser.parse_args()
     
