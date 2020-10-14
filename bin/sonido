@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+from proyecto.sonido import main
+main()
