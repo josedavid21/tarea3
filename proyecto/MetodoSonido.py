@@ -14,7 +14,7 @@ def Presentador_de_sonido(Dir, NUM):
         
 # Se define la función principal que contiene el scripting y ejecuta 
 # las funciones dependiendo de si se pide el tiemmpo de ejecución o no 
-def Main():
+def main2():
     parser = argparse.ArgumentParser()
     parser.add_argument("Dir",help="La dirección donde se encuentra el archivo mp3 que se desea reproducir incluyendo a este último, por ejemplo: /home/cristofhersj/Music/Sound.mp3",type=str)
     parser.add_argument("num",help="El número de veces que desee reproducir el archivo mp3",type=int)
@@ -29,4 +29,4 @@ def Main():
         Presentador_de_sonido(args.Dir,args.num)
     
 if __name__ == "__main__":
-    Main()
+    main2()
