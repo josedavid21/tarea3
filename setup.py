@@ -6,7 +6,7 @@ setup(
 	packages= find_packages(),
 	description='El paquete requerido para la solución de la tarea número 3 del curso microprocesadores y microcontroladores',
 	# long_description=open('README.txt').read(),
-	scripts= ["proyecto/MetodoSonido.py","proyecto/imagen.py","proyecto/metodo_texto.py"],
+	scripts= ["bin/escripts"],
 	install_requires=['playsound==1.2.2',
 	     'pillow>=7.0.0',
 	     'tabulate>=0.8.7',
