@@ -73,7 +73,7 @@ def presentadorimg(esc, foto):
 		
 '''A continuación se presenta la sección main '''	
 '''Se encarga de contener la función de presentador de imágenes, asimismo toma el tiempo de ejecución del método, en caso de haberlo solicitado mediante la bandera --time, lo imprime en pantalla '''
-def Main():
+def main1():
 	tiempo_ini = time.time_ns() #tiempo1
 	#Llamada a función presentador de imágenes con parámetros
 	#ingresados mediante argparse.
@@ -88,7 +88,7 @@ def Main():
 	
 	
 if __name__ == '__main__':	
-	Main()
+	main1()
 	
 	
 	
