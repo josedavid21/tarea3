@@ -10,7 +10,7 @@ def cuentapalabras(lista):
     counts[word] += 1
   return counts
   
-def main():
+def main3():
     #Definir argumentos de argparse
     parser = argparse.ArgumentParser()
     parser.add_argument("file", help="archivo de texto")
@@ -52,4 +52,4 @@ def main():
     print (tabulate({"Palabra": palabras, "Cantidad" : cuenta}, headers="keys"))            #tabula las palabras y su cuenta
 
 if __name__ == '__main__':
-    main()
+    main3()
