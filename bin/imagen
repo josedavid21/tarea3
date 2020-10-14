@@ -1,3 +1,3 @@
 #!/usr/bin/env python3
-import proyecto.imagen
+from proyecto.imagen import main1()
 main1()
