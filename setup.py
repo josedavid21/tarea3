@@ -6,7 +6,7 @@ setup(
 	packages= find_packages(),
 	description='El paquete requerido para la solución de la tarea número 3 del curso microprocesadores y microcontroladores',
 	# long_description=open('README.txt').read(),
-	scripts= ["proyecto/MetodoSonido.py","proyecto/imagen.py"],
+	scripts= ["proyecto/MetodoSonido.py","proyecto/imagen.py","proyecto/metodo_texto.py"],
 	install_requires=['playsound==1.2.2',
 	     'pillow>=7.0.0',
 	     'tabulate>=0.8.7',
@@ -17,5 +17,5 @@ setup(
 	    
 	url='https://github.com/josedavid21/tarea3',
 	author='Mendez, Rojas, Solís, Soto ',
-	author_email='cristofhersj@gmail.com, josedavidsz@hotmail.com'
+	author_email='cristofhersj@gmail.com, josedavidsz@hotmail.com, mendez.ceciliano@gmail.com'
 	) 
