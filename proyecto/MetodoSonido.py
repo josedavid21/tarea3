@@ -22,7 +22,7 @@ def Presentador_de_sonido(Dir, NUM):
         
 # Se define la función principal que contiene el scripting y ejecuta 
 # las funciones dependiendo de si se pide el tiemmpo de ejecución o no 
-def main2():
+def main():
     if args.time:
         tiempoini = time.time_ns() 
         Presentador_de_sonido(args.Dir,args.num)
@@ -32,4 +32,4 @@ def main2():
         Presentador_de_sonido(args.Dir,args.num)
     
 if __name__ == "__main__":
-    main2()
+    main()
