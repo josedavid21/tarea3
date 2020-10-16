@@ -15,6 +15,7 @@ def main3():
     parser = argparse.ArgumentParser()
     parser.add_argument("file", help="ruta de archivo de texto por leer")
     parser.add_argument("-t", "--time", help= "Tiempo de ejecución del método", action="store_true")
+    parser.add_argument("-s","--save", help= "Guardar los resultados en un nuevo .txt", action="store_true" )
     args = parser.parse_args()
     
     simbolos = '¡!¿?.,:;-=<>*»'
