@@ -1,6 +1,10 @@
+# importando las librerías necesarias
 import argparse
 import time
 from tabulate import tabulate
+# función para contar las palabras, 
+# entradas: lista extraída del .txt
+# salidas: Cantidad de palabras (int)
 
 def cuentapalabras(lista):
   counts = {}
@@ -10,7 +14,10 @@ def cuentapalabras(lista):
     counts[word] += 1
   return counts
 
-  
+# función para tabular los datos extraídos:
+# entradas: dirección del archivo por leer y 
+# dirección del archivo por crear y guardar
+# salidas: Impresión de la tabla realizada
 def tabular(direccion,salvar):
     
     
@@ -38,15 +45,16 @@ def tabular(direccion,salvar):
     tab.write( tabulate({"Palabra": palabras, "Cantidad" : cuenta}, headers="keys"))
     print(tabulate({"Palabra": palabras, "Cantidad" : cuenta}, headers="keys"))
     tab.close()
-  
+# Función principal   
 def main3():
-                #Definir argumentos de argparse
+    #Definir argumentos de argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("file", help="ruta de archivo de texto por leer incluyendo su extensión, por ejemplo home/cristofhersj/Documents/texto.txt", type = str)
+    parser.add_argument("file", help="Es la ruta de archivo de texto por leer, indique el nombre y la dirección, por ejemplo home/cristofhersj/Documents/texto.txt", type = str)
     parser.add_argument("save", help= "Guardar los resultados en un nuevo .txt, indique el nombre y la dirección del nuevo archivo junto con su extensión, por ejemplo: 'home/cristofhersj/Documents/texto.txt'.", type = str  )
     parser.add_argument("-t", "--time", help= "Tiempo de ejecución del método", action="store_true")
-   
     args = parser.parse_args()
+    # Se implementa la función para medir el tiempo 
+    # utilizado según se pida por el usuario o no
     if args.time:
       tiempoini = time.time_ns()            
       tabular(args.file,args.save)
