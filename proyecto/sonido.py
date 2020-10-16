@@ -19,7 +19,7 @@ def Presentador_de_sonido(Dir, NUM):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("Dir",help="La dirección donde se encuentra el archivo mp3 que se desea reproducir incluyendo a este último, por ejemplo: /home/cristofhersj/Music/Sound.mp3",type=str)
-    parser.add_argument("num",help="El número de veces que desee reproducir el archivo mp3",type=int)
+    parser.add_argument("num",help="El número de veces que desee reproducir el archivo mp3, por favor solo utilizar números enteros",type=int)
     parser.add_argument("-t", "--time", help= "Es el tiempo de ejecución del método. ", action="store_true")
     args= parser.parse_args()
 
