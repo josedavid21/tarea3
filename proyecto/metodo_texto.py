@@ -42,7 +42,7 @@ def tabular(direccion,salvar):
 def main3():
                 #Definir argumentos de argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("file", help="ruta de archivo de texto por leer, por ejemplo home/cristofhersj/Documents/", type = str)
+    parser.add_argument("file", help="ruta de archivo de texto por leer incluyendo su extensión, por ejemplo home/cristofhersj/Documents/texto.txt", type = str)
     parser.add_argument("save", help= "Guardar los resultados en un nuevo .txt, indique el nombre y la dirección del nuevo archivo junto con su extensión, por ejemplo: 'home/cristofhersj/Documents/texto.txt'.", type = str  )
     parser.add_argument("-t", "--time", help= "Tiempo de ejecución del método", action="store_true")
    
