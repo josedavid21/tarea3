@@ -13,9 +13,10 @@ def cuentapalabras(lista):
 def main3():
     #Definir argumentos de argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("file", help="ruta de archivo de texto por leer")
+    parser.add_argument("file", help="ruta de archivo de texto por leer", type = str)
+    parser.add_argument("save", help= "Guardar los resultados en un nuevo .txt", type = str  )
     parser.add_argument("-t", "--time", help= "Tiempo de ejecución del método", action="store_true")
-    parser.add_argument("-s","--save", help= "Guardar los resultados en un nuevo .txt", action="store_true" )
+   
     args = parser.parse_args()
     
     simbolos = '¡!¿?.,:;-=<>*»'
@@ -34,17 +35,6 @@ def main3():
         for character in simbolos:                                        #No distingue mayúsculas y los simbolos los ignora
             lista[i] = lista[i].replace(character,"").lower()
 
-
-    if args.time:
-        counts = cuentapalabras(lista)
-
-        tiempofin = time.time_ns()
-        
-        print("El tiempo transcurrido es de: ",str(tiempofin - tiempoini), "nanosegundos")
-        
-    else: 
-        counts = cuentapalabras(lista)
-
         
     tab = open("tabla.txt","w+")
     tab.write("palabra","cuenta")
@@ -54,5 +44,15 @@ def main3():
       tab.write( word, count)
     print (tabulate({"Palabra": palabras, "Cantidad" : cuenta}, headers="keys"))            #tabula las palabras y su cuenta
     tab.close()
+  
+  
+  
+  if args.time:
+        counts = cuentapalabras(lista)
+        tiempofin = time.time_ns()  
+        print("El tiempo transcurrido es de: ",str(tiempofin - tiempoini), "nanosegundos")
+        
+    else: 
+        counts = cuentapalabras(lista)
 if __name__ == '__main__':
     main3()
