@@ -17,7 +17,7 @@ def cuentapalabras(lista):
 # función para tabular los datos extraídos:
 # entradas: dirección del archivo por leer y 
 # dirección del archivo por crear y guardar
-# salidas: Impresión de la tabla realizada
+# salidas: txt de la tabla realizada
 def tabular(direccion,salvar):
     
     
@@ -43,12 +43,12 @@ def tabular(direccion,salvar):
       palabras.append(word)
       cuenta.append(count)
     tab.write( tabulate({"Palabra": palabras, "Cantidad" : cuenta}, headers="keys"))
-    print(tabulate({"Palabra": palabras, "Cantidad" : cuenta}, headers="keys"))
     tab.close()
 # Función principal   
 def main3():
     #Definir argumentos de argparse
     parser = argparse.ArgumentParser()
+    parser= argparse.ArgumentParser(description= 'Permite contar cada palabra de un archivo .txt y genera otro archivo txt con una tabla que dice la cantidad de cada palabra. IMPORTANTE: Las palabras estan separadas por un _ y no hay cambios de línea')
     parser.add_argument("file", help="Es la ruta de archivo de texto por leer, indique el nombre y la dirección, por ejemplo home/cristofhersj/Documents/texto.txt", type = str)
     parser.add_argument("save", help= "Guardar los resultados en un nuevo .txt, indique el nombre y la dirección del nuevo archivo junto con su extensión, por ejemplo: 'home/cristofhersj/Documents/texto.txt'.", type = str  )
     parser.add_argument("-t", "--time", help= "Tiempo de ejecución del método", action="store_true")
